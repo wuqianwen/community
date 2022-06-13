@@ -1,6 +1,6 @@
 package com.nowcoder.community.controller.interceptor;
 
-import com.nowcoder.community.Service.UserService;
+import com.nowcoder.community.service.UserService;
 import com.nowcoder.community.entity.LoginTicket;
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.util.CookieUtil;

@@ -1,4 +1,4 @@
-package com.nowcoder.community.Service;
+package com.nowcoder.community.service;
 
 import com.nowcoder.community.dao.CommentMapper;
 import com.nowcoder.community.entity.Comment;

@@ -1,4 +1,4 @@
-package com.nowcoder.community.Service;
+package com.nowcoder.community.service;
 
 import org.springframework.stereotype.Service;
 

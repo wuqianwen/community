@@ -1,8 +1,9 @@
 package com.nowcoder.community.controller;
 
-import com.nowcoder.community.Service.CommentService;
-import com.nowcoder.community.Service.DiscussPostService;
-import com.nowcoder.community.Service.UserService;
+import com.mysql.cj.util.StringUtils;
+import com.nowcoder.community.service.CommentService;
+import com.nowcoder.community.service.DiscussPostService;
+import com.nowcoder.community.service.UserService;
 import com.nowcoder.community.entity.Comment;
 import com.nowcoder.community.entity.DiscussPost;
 import com.nowcoder.community.entity.Page;
@@ -43,6 +44,10 @@ public class DiscussPostController implements CommunityConstant {
         User user = hostHolder.getUser();
         if(user == null){
             return CommunityUtil.getJSONString(403, "你还没有登录！");
+        }
+
+        if(StringUtils.isNullOrEmpty(title) || StringUtils.isNullOrEmpty(content)){
+            return CommunityUtil.getJSONString(402, "标题或内容不能为空！");
         }
 
         DiscussPost post = new DiscussPost();

@@ -2,7 +2,7 @@ package com.nowcoder.community.controller;
 
 import com.google.code.kaptcha.Producer;
 import com.mysql.cj.util.StringUtils;
-import com.nowcoder.community.Service.UserService;
+import com.nowcoder.community.service.UserService;
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;

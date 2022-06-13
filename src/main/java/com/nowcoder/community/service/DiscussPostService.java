@@ -1,4 +1,4 @@
-package com.nowcoder.community.Service;
+package com.nowcoder.community.service;
 
 import com.nowcoder.community.dao.DiscussPostMapper;
 import com.nowcoder.community.entity.DiscussPost;
@@ -30,9 +30,6 @@ public class DiscussPostService {
         return discussPostMapper.selectDiscussPostRows(userId);
     }
 
-    public List<DiscussPost> findDiscussPostOrderByTime(int userId, int offset, int limit){
-        return discussPostMapper.selectDiscussPostsOrderByTime(userId, offset, limit);
-    }
 
     public int addDiscussPost(DiscussPost post){
         if(post == null){

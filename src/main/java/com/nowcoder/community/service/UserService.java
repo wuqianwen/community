@@ -1,4 +1,4 @@
-package com.nowcoder.community.Service;
+package com.nowcoder.community.service;
 
 import com.mysql.cj.util.StringUtils;
 import com.nowcoder.community.dao.LoginTicketMapper;
@@ -52,9 +52,9 @@ public class UserService implements CommunityConstant {
     public Map<String, Object> register(User user) {
         Map<String, Object> map = new HashMap<>();
         // 空值处理
-//        if(user==null){
-//            throw new IllegalAccessException("参数不能为空！");
-//        }
+        if(user==null){
+            throw new IllegalArgumentException("参数不能为空！");
+        }
 
         if(StringUtils.isNullOrEmpty(user.getUsername())){
             map.put("usernameMsg", "账号不能为空！");
@@ -218,6 +218,10 @@ public class UserService implements CommunityConstant {
         userMapper.updatePassword(user.getId(), newPassword);
         map.put("user", user);
         return map;
+    }
+
+    public User findUserByName(String username){
+        return userMapper.selectByName(username);
     }
 
 }

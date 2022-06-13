@@ -1,7 +1,7 @@
 package com.nowcoder.community.controller;
 
 import com.mysql.cj.util.StringUtils;
-import com.nowcoder.community.Service.UserService;
+import com.nowcoder.community.service.UserService;
 import com.nowcoder.community.annotation.LoginRequired;
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.util.CommunityUtil;
@@ -22,7 +22,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.HashMap;
 import java.util.Map;
 
 @Controller
